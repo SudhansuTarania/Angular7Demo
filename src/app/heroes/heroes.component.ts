@@ -9,9 +9,14 @@ import { HEROES } from '../mocks/mock-heroes';
 })
 export class HeroesComponent implements OnInit {
 
+  selectedHero: Hero;
   heroes = HEROES;
 
   constructor(){}
 
   ngOnInit() {}
+
+  onSelect(hero : Hero) {
+    this.selectedHero = hero;
+  }
 }
